@@ -52,7 +52,7 @@ def multi_loop(loop_num, loop_initializer_type, cond, loop_statement_type, numbe
         print('wrong loop statement type!')
         return
 
-    for_statement_list = [f'for {loop_initializer}; {cond_str}; {loop_statement})' for loop_initializer,
+    for_statement_list = [f'for ({loop_initializer}; {cond_str}; {loop_statement})' for loop_initializer,
                           cond_str, loop_statement in zip(loop_initializer_list, cond_list, loop_statement_list)]
     print(build_statement(for_statement_list, 0, number_of_spaces))
 
